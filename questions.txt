@@ -1,0 +1,3 @@
+1. How can I review an info about transaction which returned by the call of some function of contract? 
+
+docker exec celo-ultralight-node geth attach --exec 'personal.unlockAccount("0x3D5804ad2f5AF5Ae30187a9c20CDb8A090cA9917", "password")'
