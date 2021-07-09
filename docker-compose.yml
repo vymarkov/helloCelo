@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+  celo_node:
+    container_name: celo-ultralight-node
+    volumes:
+    - ./celo-data-dir:/root/.celo
+    image: us.gcr.io/celo-org/geth:alfajores
+    ports: 
+    - 8545:8545/tcp
+    command: --verbosity 3  --syncmode lightest --rpc --rpcaddr 0.0.0.0 --rpcapi eth,net,web3,debug,admin,personal --etherbase 0x3D5804ad2f5AF5Ae30187a9c20CDb8A090cA9917 --alfajores --datadir=/root/.celo --allow-insecure-unlock
